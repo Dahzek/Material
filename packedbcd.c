@@ -68,8 +68,7 @@ int main(void)
         
         copianum -= copiadigito*potencia; //Elimino el primer numero
         potencia /= 10; //Calculo x cuanto tendre que dividir para obtener el primer digito
-        
-            
+                 
         goto TransformarBCD;
     }
     

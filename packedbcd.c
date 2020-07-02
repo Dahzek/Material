@@ -62,8 +62,10 @@ int main(void)
             goto Binario;
         }
         
+        //Añade una separacion x nible
         bcd[cont_bits] = ' ';
         cont_bits++;
+        
         copianum -= copiadigito*potencia; //Elimino el primer numero
         potencia /= 10; //Calculo x cuanto tendre que dividir para obtener el primer digito
         

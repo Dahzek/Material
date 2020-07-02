@@ -5,7 +5,7 @@
 int main(void)
 {
     //Declaracion de variables
-    int numero = 0, copianum = 0, digito =  0, copiadigito = 0, cont_bits = 0, longitud = 0, cont = 0, contPotencia = 1, contBinario = 0, pow2 = 0, potencia = 1;
+    int numero = 0, copianum = 0, digito =  0, copiadigito = 0, cont_bits = 0, longitud = 0, cont = 0, contPotencia = 1, contBinario = 0, pow2 = 0, potencia = 1,  aux = 0;
     char bcd[41];
     
     scanf("%i", &numero); //Lee el numero a transformar
@@ -36,6 +36,11 @@ int main(void)
     TransformarBCD:
     //Si hay digitos por transformar, recorre el "ciclo"
     if(potencia > 0){
+        if(aux == 8){
+            bcd[cont_bits] = ' ';
+            cont_bits++;
+            aux = 0;
+        }
         digito = copianum/potencia; //Consigo el primer digito
         copiadigito = digito;
         
@@ -54,9 +59,11 @@ int main(void)
                 bcd[cont_bits] = '0';
             }
             
+            aux++; 
             pow2 /= 2; //La potencia disminuye en 1 a su exponente
             cont_bits++;
             contBinario++;
+            
             goto Binario;
         }
         

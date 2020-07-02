@@ -36,11 +36,6 @@ int main(void)
     TransformarBCD:
     //Si hay digitos por transformar, recorre el "ciclo"
     if(potencia > 0){
-        if(aux == 8){
-            bcd[cont_bits] = ' ';
-            cont_bits++;
-            aux = 0;
-        }
         digito = copianum/potencia; //Consigo el primer digito
         copiadigito = digito;
         
@@ -63,13 +58,16 @@ int main(void)
             pow2 /= 2; //La potencia disminuye en 1 a su exponente
             cont_bits++;
             contBinario++;
-            
+
             goto Binario;
         }
         
+        bcd[cont_bits] = ' ';
+        cont_bits++;
         copianum -= copiadigito*potencia; //Elimino el primer numero
         potencia /= 10; //Calculo x cuanto tendre que dividir para obtener el primer digito
-       
+        
+            
         goto TransformarBCD;
     }
     

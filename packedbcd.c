@@ -1,11 +1,12 @@
 //gcc 7.4.0
+//Desarrollado por @akuseryinc
 
 #include <stdio.h>
 
 int main(void)
 {
     //Declaracion de variables
-    int numero = 0, copianum = 0, digito =  0, copiadigito = 0, cont_bits = 0, longitud = 0, cont = 0, contPotencia = 1, contBinario = 0, pow2 = 0, potencia = 1,  aux = 0;
+    int numero = 0, copianum = 0, digito =  0, copiadigito = 0, cont_bits = 0, longitud = 0, cont = 0, contPotencia = 1, contBinario = 0, pow2 = 0, potencia = 1;
     char bcd[41];
     
     scanf("%i", &numero); //Lee el numero a transformar
@@ -54,7 +55,6 @@ int main(void)
                 bcd[cont_bits] = '0';
             }
             
-            aux++; 
             pow2 /= 2; //La potencia disminuye en 1 a su exponente
             cont_bits++;
             contBinario++;

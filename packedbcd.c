@@ -1,5 +1,5 @@
 //gcc 7.4.0
-//Desarrollado por @akuseryinc
+//Desarrollado por @akuseryuinc
 
 #include <stdio.h>
 

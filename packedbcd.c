@@ -75,7 +75,7 @@ int main(void)
         goto TransformarBCD;
     }
     
-    bcd[cont_bits] =  '\0'; //Añade un caracter nulo a la cadena
+    bcd[cont_bits] =  '\0'; //Añade un caracter nulo a la cadena que funciona como cierre
    
     printf("Numero expresado en BCD\n%s\n", bcd);
    

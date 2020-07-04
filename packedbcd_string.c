@@ -29,25 +29,25 @@ int main(void)
             else {
                 bcd[cont_bits] = '0';
             }
-            
-            pow2 /= 2; //La potencia disminuye en 1 a su exponente
+            //La potencia disminuye en 1 a su exponente y pasamos al siguiente bit
+            pow2 /= 2; 
             cont_bits++;
             contBinario++;
 
             goto Binario;
         }
-        
-        bcd[cont_bits] = ' ';
+        //Agregamos un espacio, para separar por Nible (medio byte)
+        bcd[cont_bits] = ' '; 
         cont_bits++;
         cont++;
     
-        goto TransformarBCD;
+        goto TransformarBCD; //Salto a la etiqueta TransformarBCD  (Linea 14)
     }
     
-    bcd[cont_bits] = '\0';
+    bcd[cont_bits] = '\0'; //Añadimos un null para el cierre correcto de la string
+    //Mostramos los datos importantes
     printf("Numero: %s\n", numero);
     printf("Longitud: %i\n", cont);
-
     printf("Numero expresado en BCD\n%s\n", bcd);
    
     return 0;
